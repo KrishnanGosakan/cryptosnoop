@@ -1,0 +1,49 @@
+if(bb->stmts[i]->tag == Ist_WrTmp)
+		{
+			//int tmpVal = bb->stmts[i]->Ist.WrTmp.tmp;
+			IRExpr *expr = bb->stmts[i]->Ist.WrTmp.data;	
+			if(expr->tag == Iex_Binop)
+			{
+				if(expr->Iex.Binop.op == Iop_Shr32)
+				{
+					IRExpr *a1,*a2;
+					a1 = expr->Iex.Binop.arg1;
+					a2 = expr->Iex.Binop.arg2;
+					if(a2->tag == Iex_Const)
+					{
+						IRConst *c = a2->Iex.Const.con;
+						if(c->tag == Ico_U8)
+						{
+							UChar sr;
+							sr = c->Ico.U8;
+							if(sr == 27)
+							{
+								int nxtInstrIndex = i+1;
+								if(nxtInstrIndex < bb->stmts_used)
+								{
+									IRExpr *niExpr = bb->stmts[nxtInstrIndex]->Ist.WrTmp.data;
+									if(niExpr->tag == Iex_Binop)
+									{
+										IRExpr *a;
+										a = niExpr->Iex.Binop.arg2;
+										if(a->tag == Iex_Const)
+										{
+											IRConst *d = a->Iex.Const.con;
+											if(d->tag == Ico_U8)
+											{
+												UChar sl;
+												sl = d->Ico.U8;
+												if(sl == 5)
+												{
+													rolCount++;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}

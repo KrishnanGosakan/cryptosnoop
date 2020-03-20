@@ -1,0 +1,254 @@
+super block #5527==================================================================
+0 0
+1 0
+2 0
+3 0
+4 0
+5 5
+6 0
+7 0
+------ IMark(0x80F3C60, 3, 0) ------
+t0 = GET:I32(20)
+t160 = Shl32(t0,0x1E:I8)
+t162 = Shr32(t0,0x2:I8)
+t159 = Or32(t162,t160)
+IR-NoOp
+IR-NoOp
+IR-NoOp
+IR-NoOp
+IR-NoOp
+------ IMark(0x80F3C63, 2, 0) ------
+t8 = GET:I32(32)
+t7 = GET:I32(16)
+t6 = Xor32(t8,t7)
+PUT(32) = t6
+------ IMark(0x80F3C65, 2, 0) ------
+t176 = GET:I32(8)
+PUT(28) = t176
+------ IMark(0x80F3C67, 4, 0) ------
+t178 = GET:V128(224)
+t179 = GET:V128(176)
+t177 = InterleaveLO64x2(t179,t178)
+PUT(224) = t177
+------ IMark(0x80F3C6B, 4, 0) ------
+t180 = GET:V128(208)
+PUT(256) = t180
+PUT(68) = 0x80F3C6F:I32
+------ IMark(0x80F3C6F, 3, 0) ------
+t12 = GET:I32(24)
+t11 = GET:I32(36)
+t10 = LDle:I32(t12)
+t9 = Add32(t11,t10)
+PUT(36) = t9
+------ IMark(0x80F3C72, 2, 0) ------
+t14 = GET:I32(12)
+t13 = Xor32(t159,t14)
+PUT(40) = 0xF:I32
+PUT(44) = t13
+PUT(48) = 0x0:I32
+PUT(52) = 0x0:I32
+PUT(20) = t13
+------ IMark(0x80F3C74, 4, 0) ------
+t183 = GET:V128(272)
+t181 = Add32x4(t183,t180)
+PUT(272) = t181
+PUT(68) = 0x80F3C78:I32
+------ IMark(0x80F3C78, 6, 0) ------
+t184 = Add32(t12,0x40:I32)
+t187 = And32(t184,0xF:I32)
+t186 = CmpNE32(t187,0x0:I32)
+if (t186) { PUT(68) = 0x80F3C78:I32; exit-SigSEGV } 
+t188 = GET:V128(160)
+STle(t184) = t188
+------ IMark(0x80F3C7E, 3, 0) ------
+t190 = Shr32(t176,0x1B:I8)
+t192 = Shl32(t176,0x5:I8)
+t189 = Or32(t192,t190)
+IR-NoOp
+------ IMark(0x80F3C81, 2, 0) ------
+t23 = Add32(t9,t6)
+------ IMark(0x80F3C83, 5, 0) ------
+t206 = V128HIto64(t180)
+t207 = V128to64(t180)
+t30 = Shr64(t206,0x20:I8)
+t209 = Shl64(t206,0x20:I8)
+t210 = Shr64(t207,0x20:I8)
+t208 = Or64(t210,t209)
+t27 = 64HLtoV128(t30,t208)
+------ IMark(0x80F3C88, 2, 0) ------
+t32 = And32(t176,t13)
+------ IMark(0x80F3C8A, 2, 0) ------
+t35 = Xor32(t13,t14)
+PUT(20) = t35
+------ IMark(0x80F3C8C, 4, 0) ------
+t211 = XorV128(t177,t188)
+------ IMark(0x80F3C90, 2, 0) ------
+t38 = Add32(t23,t189)
+------ IMark(0x80F3C92, 3, 0) ------
+t215 = Shl32(t189,0x19:I8)
+t217 = Shr32(t189,0x7:I8)
+t214 = Or32(t217,t215)
+IR-NoOp
+------ IMark(0x80F3C95, 4, 0) ------
+t232 = GET:V128(192)
+t231 = XorV128(t27,t232)
+PUT(256) = t231
+------ IMark(0x80F3C99, 2, 0) ------
+t47 = Xor32(t32,t14)
+PUT(28) = t47
+------ IMark(0x80F3C9B, 2, 0) ------
+PUT(32) = t38
+PUT(68) = 0x80F3C9D:I32
+------ IMark(0x80F3C9D, 4, 0) ------
+t235 = Add32(t12,0x4:I32)
+t51 = LDle:I32(t235)
+t50 = Add32(t7,t51)
+PUT(16) = t50
+------ IMark(0x80F3CA1, 4, 0) ------
+t237 = XorV128(t211,t231)
+PUT(224) = t237
+------ IMark(0x80F3CA5, 2, 0) ------
+t54 = Xor32(t214,t35)
+PUT(8) = t54
+------ IMark(0x80F3CA7, 3, 0) ------
+t241 = Shr32(t38,0x1B:I8)
+t243 = Shl32(t38,0x5:I8)
+t240 = Or32(t243,t241)
+t248 = x86g_calculate_eflags_all[mcx=0x9]{0x58153e40}(0xF:I32,t54,0x0:I32,0x0:I32):I32
+PUT(40) = 0x1E:I32
+PUT(44) = t240
+PUT(48) = 0x0:I32
+PUT(52) = t248
+PUT(36) = t240
+PUT(68) = 0x80F3CAA:I32
+------ IMark(0x80F3CAA, 6, 0) ------
+t257 = Add32(t12,0x30:I32)
+t260 = And32(t257,0xF:I32)
+t259 = CmpNE32(t260,0x0:I32)
+if (t259) { PUT(68) = 0x80F3CAA:I32; exit-SigSEGV } 
+STle(t257) = t181
+------ IMark(0x80F3CB0, 2, 0) ------
+t64 = Add32(t50,t47)
+------ IMark(0x80F3CB2, 2, 0) ------
+t67 = And32(t38,t54)
+------ IMark(0x80F3CB4, 4, 0) ------
+------ IMark(0x80F3CB8, 2, 0) ------
+t70 = Xor32(t54,t35)
+PUT(8) = t70
+------ IMark(0x80F3CBA, 2, 0) ------
+t73 = Add32(t64,t240)
+------ IMark(0x80F3CBC, 3, 0) ------
+t264 = Shl32(t240,0x19:I8)
+t266 = Shr32(t240,0x7:I8)
+t263 = Or32(t266,t264)
+IR-NoOp
+------ IMark(0x80F3CBF, 4, 0) ------
+------ IMark(0x80F3CC3, 2, 0) ------
+t82 = Xor32(t67,t35)
+------ IMark(0x80F3CC5, 5, 0) ------
+IR-NoOp
+t282 = V128to64(t237)
+t89 = Shl64(t282,0x20:I8)
+t86 = 64HLtoV128(t89,0x0:I64)
+------ IMark(0x80F3CCA, 4, 0) ------
+t283 = Add32x4(t237,t237)
+------ IMark(0x80F3CCE, 2, 0) ------
+PUT(28) = t73
+PUT(68) = 0x80F3CD0:I32
+------ IMark(0x80F3CD0, 4, 0) ------
+t287 = Add32(t12,0x8:I32)
+t92 = LDle:I32(t287)
+t91 = Add32(t14,t92)
+------ IMark(0x80F3CD4, 5, 0) ------
+t96 = ShrN32x4(t237,0x1F:I8)
+PUT(256) = t96
+------ IMark(0x80F3CD9, 2, 0) ------
+t97 = Xor32(t263,t70)
+------ IMark(0x80F3CDB, 3, 0) ------
+t290 = Shr32(t73,0x1B:I8)
+t292 = Shl32(t73,0x5:I8)
+t289 = Or32(t292,t290)
+IR-NoOp
+------ IMark(0x80F3CDE, 4, 0) ------
+------ IMark(0x80F3CE2, 2, 0) ------
+t106 = Add32(t91,t82)
+------ IMark(0x80F3CE4, 2, 0) ------
+t109 = And32(t73,t97)
+------ IMark(0x80F3CE6, 2, 0) ------
+t112 = Xor32(t97,t70)
+PUT(36) = t112
+------ IMark(0x80F3CE8, 5, 0) ------
+t116 = ShrN32x4(t86,0x1E:I8)
+PUT(160) = t116
+------ IMark(0x80F3CED, 2, 0) ------
+t117 = Add32(t106,t289)
+------ IMark(0x80F3CEF, 3, 0) ------
+t308 = Shl32(t289,0x19:I8)
+t310 = Shr32(t289,0x7:I8)
+t307 = Or32(t310,t308)
+IR-NoOp
+------ IMark(0x80F3CF2, 4, 0) ------
+t324 = OrV128(t283,t96)
+------ IMark(0x80F3CF6, 2, 0) ------
+t126 = Xor32(t109,t70)
+PUT(28) = t126
+------ IMark(0x80F3CF8, 2, 0) ------
+PUT(32) = t117
+PUT(68) = 0x80F3CFA:I32
+------ IMark(0x80F3CFA, 4, 0) ------
+t328 = Add32(t12,0xC:I32)
+t130 = LDle:I32(t328)
+t129 = Add32(t35,t130)
+PUT(20) = t129
+------ IMark(0x80F3CFE, 5, 0) ------
+t134 = ShlN32x4(t86,0x2:I8)
+PUT(272) = t134
+------ IMark(0x80F3D03, 2, 0) ------
+t135 = Xor32(t307,t112)
+PUT(16) = t135
+------ IMark(0x80F3D05, 3, 0) ------
+t331 = Shr32(t117,0x1B:I8)
+t333 = Shl32(t117,0x5:I8)
+t330 = Or32(t333,t331)
+t338 = x86g_calculate_eflags_all[mcx=0x9]{0x58153e40}(0xF:I32,t135,0x0:I32,0x0:I32):I32
+PUT(40) = 0x1E:I32
+PUT(44) = t330
+PUT(48) = 0x0:I32
+PUT(52) = t338
+PUT(12) = t330
+------ IMark(0x80F3D08, 4, 0) ------
+t347 = XorV128(t324,t116)
+PUT(224) = t347
+PUT(68) = 0x80F3D0C:I32
+------ IMark(0x80F3D0C, 6, 0) ------
+t350 = Add32(t12,0x60:I32)
+t353 = And32(t350,0xF:I32)
+t352 = CmpNE32(t353,0x0:I32)
+if (t352) { PUT(68) = 0x80F3D0C:I32; exit-SigSEGV } 
+t354 = LDle:V128(t350)
+PUT(160) = t354
+------ IMark(0x80F3D12, 2, 0) ------
+t145 = Add32(t129,t126)
+PUT(20) = t145
+------ IMark(0x80F3D14, 2, 0) ------
+t148 = And32(t117,t135)
+PUT(40) = 0xF:I32
+PUT(44) = t148
+PUT(48) = 0x0:I32
+PUT(52) = 0x0:I32
+PUT(32) = t148
+------ IMark(0x80F3D16, 4, 0) ------
+t355 = XorV128(t347,t134)
+PUT(224) = t355
+------ IMark(0x80F3D1A, 5, 0) ------
+t358 = V128HIto64(t179)
+IR-NoOp
+IR-NoOp
+IR-NoOp
+t362 = 64to32(t358)
+t363 = 64HIto32(t358)
+t365 = 32HLto64(t363,t362)
+IR-NoOp
+t364 = 64HLtoV128(t365,t365)
+PUT(240) = t364
+
